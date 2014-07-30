@@ -1,0 +1,4 @@
+Import('cpu_env', 'apu_env')
+#cpu_env.Append(ASFLAGS = 'v')
+ROMFile = cpu_env.Program(Split('snesmain.asm snesinit.asm'))
+Return('ROMFile')
